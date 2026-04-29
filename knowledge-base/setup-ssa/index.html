@@ -1,0 +1,186 @@
+<!DOCTYPE html><html lang="ru" data-astro-cid-i7dpvkuz> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"><link rel="icon" href="/favicon.ico"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><title>Настройка Steam server-side authenticator</title><link rel="stylesheet" href="/photoswipe.css"><link rel="preload" href="/images/header-icons.svg" as="image"><script>
+      (function() {
+        var linked = localStorage.getItem('theme_linked') !== 'false';
+        var deviceTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'night' : 'day';
+        var theme = linked ? deviceTheme : (localStorage.getItem('theme') || deviceTheme);
+        document.documentElement.setAttribute('data-theme', theme);
+      })();
+    </script><link rel="stylesheet" href="/assets/PLayout.pON-2iUB.css"></head> <body data-astro-cid-i7dpvkuz> <div class="navbar-wrap" data-astro-cid-i7dpvkuz> <nav class="navbar glass" data-astro-cid-i7dpvkuz> <a href="/" class="navbar-brand" data-astro-cid-i7dpvkuz> <img src="/images/profiton.svg" alt="PROFITON" class="navbar-logo" data-astro-cid-i7dpvkuz> <span class="navbar-title has-page" data-astro-cid-i7dpvkuz>PROFITON</span> </a>  <span class="navbar-sep" data-astro-cid-i7dpvkuz>&bull;</span> <span class="navbar-page" data-astro-cid-i7dpvkuz> <img src="/images/ssa.svg" alt="" class="navbar-page-icon" data-astro-cid-i7dpvkuz> <span class="navbar-page-title" data-astro-cid-i7dpvkuz>Настройка Steam server-side authenticator</span> </span>  <button id="tg-toggle" class="tg-toggle" type="button" aria-label="Telegram" data-astro-cid-i7dpvkuz> <span class="tg-btn-icon" data-astro-cid-i7dpvkuz></span> </button> <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Переключить тему" data-astro-cid-i7dpvkuz> <svg class="icon-day" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-i7dpvkuz> <circle cx="12" cy="12" r="5" data-astro-cid-i7dpvkuz></circle><line x1="12" y1="1" x2="12" y2="3" data-astro-cid-i7dpvkuz></line><line x1="12" y1="21" x2="12" y2="23" data-astro-cid-i7dpvkuz></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64" data-astro-cid-i7dpvkuz></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78" data-astro-cid-i7dpvkuz></line><line x1="1" y1="12" x2="3" y2="12" data-astro-cid-i7dpvkuz></line><line x1="21" y1="12" x2="23" y2="12" data-astro-cid-i7dpvkuz></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36" data-astro-cid-i7dpvkuz></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22" data-astro-cid-i7dpvkuz></line> </svg> <svg class="icon-night" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-i7dpvkuz> <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" data-astro-cid-i7dpvkuz></path> </svg> </button> </nav> </div> <div id="tg-popup" class="tg-popup glass" data-astro-cid-i7dpvkuz> <div class="tg-link" data-href="https://t.me/ProfitonSupport" data-astro-cid-i7dpvkuz> <span data-astro-cid-i7dpvkuz>Техподдержка</span> <img src="/images/tg-round.svg" class="tg-icon" alt="" data-astro-cid-i7dpvkuz> <span class="tg-handle" data-astro-cid-i7dpvkuz>@ProfitonSupport</span> </div> <div class="tg-link" data-href="https://t.me/Profiton_Chat" data-astro-cid-i7dpvkuz> <span data-astro-cid-i7dpvkuz>Чат сообщества</span> <img src="/images/tg-round.svg" class="tg-icon" alt="" data-astro-cid-i7dpvkuz> <span class="tg-handle" data-astro-cid-i7dpvkuz>@Profiton_Chat</span> </div> <div class="tg-link" data-href="https://t.me/Profiton_News" data-astro-cid-i7dpvkuz> <span data-astro-cid-i7dpvkuz>Новостной канал</span> <img src="/images/tg-round.svg" class="tg-icon" alt="" data-astro-cid-i7dpvkuz> <span class="tg-handle" data-astro-cid-i7dpvkuz>@Profiton_News</span> </div> </div> <div class="page-wrap" data-astro-cid-i7dpvkuz> <header class="site-header" data-astro-cid-i7dpvkuz> <div class="header-banner" data-astro-cid-i7dpvkuz> <div class="header-left" data-astro-cid-i7dpvkuz> <div class="header-text" data-astro-cid-i7dpvkuz> <img src="/images/profiton-no-bg.svg" alt="P" class="header-p-icon" data-astro-cid-i7dpvkuz><span class="header-rofiton" data-astro-cid-i7dpvkuz>ROFITON</span> </div> </div> <div class="header-right" data-astro-cid-i7dpvkuz> <img src="/images/header-icons.svg" alt="" class="header-icons" data-astro-cid-i7dpvkuz> </div> </div> </header> <main class="prose" data-astro-cid-i7dpvkuz> <h1 data-astro-cid-i7dpvkuz><img src="/images/ssa.svg" alt="" class="page-icon" data-astro-cid-i7dpvkuz><span data-astro-cid-i7dpvkuz>Настройка Steam server-side authenticator</span></h1> <p><a href="/knowledge-base"><strong>База знаний</strong></a></p>
+<h2 id="теоретические-основы"><span class="color-override" style="--c: #3669C4">Теоретические основы</span></h2>
+<p><em>Steam server-side authenticator</em> (<em>SSA</em>) — альтернатива публичной версии <em>SDA</em>, используемая для автоматизации процессов: получение <em>Steam Guard</em>, автоматическое принятие подарочных трейдов, сделок на Торговой площадке <em>Steam</em> и передачи предметов на <em>Market CS:GO</em>.</p>
+<h2 id="практическая-настройка"><span class="color-override" style="--c: #3669C4">Практическая настройка</span></h2>
+<yellow><p><strong>При необходимости вы можете вернуться к исходной конфигурации. Для этого в окне редактирования конфигурации нажмите правой кнопкой мыши и выберите пункт «Вернуть шаблонную конфигурацию».</strong></p></yellow>
+<aside data-emoji="ℹ️"><p>В конфигурации используются два типа прокси. <strong>Индивидуальный прокси</strong> — выделенный IP-адрес, через который аккаунт <em>Steam</em> выполняет всю торговую работу (листинги, ордера на покупку, трейды). Оптимально один аккаунт на один IP, если аккаунтов много — допустимо до 2-3 на один адрес, но чем больше аккаунтов делят IP, тем выше суммарная нагрузка запросами и риск блокировки адреса со стороны <em>Steam</em> (ошибка 429, слишком много запросов). <strong>Прокси-пул</strong> (<em>Webshare</em>) — отдельный пул IP-адресов, который софты используют для многопоточного парсинга цен по всем торговым площадкам, работает полностью независимо от аккаунтов <em>Steam</em> и не расходует их лимиты запросов.</p></aside>
+<div class="pspoiler"> <button type="button" class="pspoiler-trigger" aria-expanded="false"> <span style><strong>Параметры, требующие заполнения</strong></span> <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="pspoiler-chevron"><path d="m6 9 6 6 6-6"></path></svg> </button> <div class="pspoiler-content"> <div class="pspoiler-inner"> <pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="plaintext"><code><span class="line"><span># Токен вашего Телеграм-бота.</span></span>
+<span class="line"><span>  token:</span></span></code></pre><p>“Токен <em>Telegram</em>-бота” - уникальный ключ, который выдается при создании бота. Создайте бота через <em>@BotFather</em> и скопируйте токен.</p><ul>
+<li>Откройте мессенджер <em>Telegram</em> на своем устройстве (смартфон, планшет или компьютер).</li>
+<li>В поисковой строке <em>Telegram</em> найдите аккаунт <em>@BotFather (<a href="https://t.me/BotFather">https://t.me/BotFather</a>)</em>. Он является официальным сервисом для создания и настройки ботов.</li>
+<li>Откройте диалог с <em>@BotFather</em> и начните общение с ним, нажав кнопку <em>“Start”</em> или отправив команду <em>/start</em>.</li>
+<li>Для создания нового бота отправьте команду <em>/newbot</em>.</li>
+<li>Следуйте инструкциям <em>@BotFather</em>:
+<ul>
+<li>Введите имя вашего бота. Это отображаемое имя, которое видят пользователи.</li>
+<li>Введите уникальное имя пользователя для бота. Оно должно заканчиваться на «<em>bot</em>» или «<em>_bot</em>» и быть уникальным в рамках всей платформы <em>Telegram</em>.</li>
+</ul>
+</li>
+<li>Если все введенные данные корректны, <em>@BotFather</em> создаст вашего бота и предоставит вам его токен доступа. Этот токен является ключом для управления ботом и обязателен для настройки и использования бота. Сохраните его в безопасном месте.</li>
+</ul><warn><p><strong>Для каждого софта обязательно создайте отдельного <em>Telegram</em>-бота. Нарушение этого правила приведёт к некорректной работе и ошибкам.</strong></p></warn><pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="plaintext"><code><span class="line"><span># Ваш чат ID в Телеграме.</span></span>
+<span class="line"><span>  chat_id:</span></span></code></pre><p><em><strong>“Chat ID”</strong></em> - идентификатор вашего чата в Телеграме.</p><ul>
+<li>Откройте мессенджер <em>Telegram</em> на своем устройстве (смартфон, планшет или компьютер).</li>
+<li>В поисковой строке Telegram найдите аккаунт <em>@getmyid_bot (<a href="https://t.me/getmyid_bot">https://t.me/getmyid_bot</a>)</em>.</li>
+<li>Откройте диалог с <em>@getmyid_bot</em> и начните общение с ним, нажав кнопку <em>“Start”</em> или отправив команду <em>/start</em>.</li>
+<li>Если все сделано корректно, бот предоставит ваш <em>Chat ID</em>.</li>
+</ul><pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="plaintext"><code><span class="line"><span>Status (Enable/Disable):</span></span></code></pre><p><em><strong>”Status (Enable/Disable)”</strong></em>  - параметр, определяющий активность аккаунта <em>Steam</em> в <em>Steam server-side authenticator</em>.</p><ul>
+<li><strong>Enable:</strong> Активирует аккаунт, позволяя софту обновлять сессию, получать коды <em>Steam Guard</em> и выполнять другие необходимые действия.</li>
+<li><strong>Disable:</strong> Отключает аккаунт, приостанавливая его работу в софте. Аккаунт будет находиться в режиме ожидания до тех пор, пока вы не активируете его снова, изменив статус на “Enable”.</li>
+</ul><p>Для изменения статуса аккаунта выберите нужное значение в соответствующем поле.</p><pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="plaintext"><code><span class="line"><span>Alias:</span></span></code></pre><p><em><strong>”Alias”</strong></em> - подпись аккаунта в софте. Именно это название будет отображаться в уведомлениях <em>Telegram</em>-бота при управлении софтом через <em>Telegram</em>.</p><pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="plaintext"><code><span class="line"><span>steamid:</span></span></code></pre><p>“<em><strong>SteamID</strong></em>” - уникальный идентификатор вашего аккаунта <em>Steam</em>.</p><ul>
+<li>Для получения <em>SteamID</em> откройте файл <em>MaFile</em>, связанный с вашим аккаунтом, с помощью текстового редактора (например, блокнота). Внутри файла найдите параметр <em>SteamID</em> - это и будет вашим идентификатором.</li>
+</ul><pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="plaintext"><code><span class="line"><span>proxy:</span></span></code></pre><p><em>“Proxy (HTTP)”</em> - прокси-сервер, используемый для обеспечения анонимности и безопасности ваших аккаунтов при работе с софтом.</p><ul>
+<li>Вы можете приобрести <em>HTTP</em>-прокси на сервисе, таком как <em>Proxyline.net</em> (это не реклама, а пример возможного сервиса).</li>
+<li>Убедитесь, что выбираете именно <em>HTTP</em>-прокси, поскольку прокси типа <em>SOCKS5</em> не подойдут для работы с этим софтом.</li>
+<li>Вам нужно будет указать прокси в формате: <code>http://ЛОГИН:ПАРОЛЬ@IP-адрес:ПОРТ</code> при заполнении конфигурации.</li>
+</ul><pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="plaintext"><code><span class="line"><span>password:</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>ПРИМЕР:</span></span>
+<span class="line"><span>password: Nagibator2010#@!</span></span></code></pre><p>“<em><strong>Password</strong></em>” — ваш пароль для доступа к аккаунту <em>Steam</em>.</p><pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="plaintext"><code><span class="line"><span>market_csgo_api_key:</span></span></code></pre><p><em><strong>“API-ключ Market CS:GO”</strong></em> - это уникальный идентификатор, позволяющий софту работать с вашим аккаунтом на площадке <em>Market CS:GO</em>.</p><p>Для получения <em>API</em>-ключа выполните следующие шаги:</p><ul>
+<li>
+<p>Перейдите на страницу документации <em>Market CS:GO</em> по ссылке: <a href="https://market-old.csgo.com/docs"><em><strong>https://market-old.csgo.com/docs</strong></em></a>.</p>
+<p>⚠️ <strong>При создании <em>API</em>-ключа убедитесь, что валюта на <em>Market CS:GO</em>
+установлена как <em>RUB</em> (рубли). В противном случае софт не будет работать.</strong></p>
+</li>
+<li>
+<p>Найдите раздел <em>“Создание API-ключа”</em>.</p>
+</li>
+<li>
+<p>В этом разделе будет кнопка для создания <em>API</em>-ключа. Нажмите на неё и следуйте инструкциям на сайте.</p>
+</li>
+<li>
+<p>После создания ключа, он будет отображаться на странице. Скопируйте его и вставьте в соответствующее поле конфигурации софта.</p>
+</li>
+</ul><p>Пожалуйста, обратите внимание, что <em>API</em>-ключ является чувствительной информацией и не должен передаваться третьим лицам. Будьте внимательны при работе с <em>API</em>-ключами.</p> </div> </div> </div>  
+<div class="pspoiler"> <button type="button" class="pspoiler-trigger" aria-expanded="false"> <span style><strong>Пример заполнения конфигурации и добавления аккаунтов</strong></span> <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="pspoiler-chevron"><path d="m6 9 6 6 6-6"></path></svg> </button> <div class="pspoiler-content"> <div class="pspoiler-inner"> <h3 id="1-пример-корректного-заполнения-конфигурации-ssa">1) Пример корректного заполнения конфигурации SSA.</h3><pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="yaml"><code><span class="line"><span style="color:#85E89D">telegram</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#6A737D"># Токен вашего Телеграм-бота (Обязательное поле.)</span></span>
+<span class="line"><span style="color:#85E89D">  token</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">6336844150:ABY2Jonpe2JTAEYUJtKeBNyO3xbKw-FFAt0</span></span>
+<span class="line"><span style="color:#6A737D"># Ваш чат ID в Телеграме (Обязательное поле.)</span></span>
+<span class="line"><span style="color:#85E89D">  chat_id</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">2365344527</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D"># Автоматическое принятие подарочных трейдов через API Steam (true/false).</span></span>
+<span class="line"><span style="color:#85E89D">check_gifttrades</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">true</span></span>
+<span class="line"><span style="color:#6A737D"># Интервал проверки новых подарочных трейдов через API Steam (например, 30s, 1m, 5m).</span></span>
+<span class="line"><span style="color:#85E89D">check_gifttrades_interval</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">1m</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D"># Автоматическое принятие подарочных трейдов через Market CS:GO (true/false).</span></span>
+<span class="line"><span style="color:#85E89D">check_gifttrades_market</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">true</span></span>
+<span class="line"><span style="color:#6A737D"># Интервал проверки новых подарочных трейдов через Market CS:GO (например, 30s, 1m, 5m).</span></span>
+<span class="line"><span style="color:#85E89D">check_gifttrades_market_interval</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">1m</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D"># Автоматическое подтверждение трейдов и выставления лотов на продажу (true/false).</span></span>
+<span class="line"><span style="color:#85E89D">check_confirmations</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">true</span></span>
+<span class="line"><span style="color:#6A737D"># Интервал проверки необходимости подтверждения (например, 30s, 1m, 5m).</span></span>
+<span class="line"><span style="color:#85E89D">check_confirmations_interval</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">30s</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D"># Автоматическое подтверждение трейдов в мобильном приложении Steam (true/false).</span></span>
+<span class="line"><span style="color:#85E89D">autoconfirm_trades</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">true</span></span>
+<span class="line"><span style="color:#6A737D"># Автоматическое подтверждение выставления лотов на продажу в Steam Market (true/false).</span></span>
+<span class="line"><span style="color:#85E89D">autoconfirm_market_transactions</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">true</span></span></code></pre><h3 id="2-пример-корректно-настроенного-аккаунта"><strong>2) Пример корректно настроенного аккаунта.</strong></h3><div class="pswp-gallery" style="margin-top:0.5rem;"> <a href="/images/knowledge-base/ssa/image2.avif" target="_blank"> <img src="/images/knowledge-base/ssa/image2.avif" alt> </a> </div><h3 id="3-пример-аккаунтов-с-ошибкой-в-настройках"><strong>3) Пример аккаунтов с ошибкой в настройках.</strong></h3><div class="pswp-gallery" style="margin-top:0.5rem;"> <a href="/images/knowledge-base/ssa/image0.avif" target="_blank"> <img src="/images/knowledge-base/ssa/image0.avif" alt> </a> </div><h3 id="4-пример-неактивного-аккаунта"><strong>4) Пример неактивного аккаунта.</strong></h3><div class="pswp-gallery" style="margin-top:0.5rem;"> <a href="/images/knowledge-base/ssa/image1.avif" target="_blank"> <img src="/images/knowledge-base/ssa/image1.avif" alt> </a> </div> </div> </div> </div>  <script type="module">function r(){document.querySelectorAll(".pspoiler").forEach(t=>{if(t.hasAttribute("data-init"))return;t.setAttribute("data-init","");const n=t.querySelector(".pspoiler-trigger"),e=t.querySelector(".pspoiler-content"),a=t.querySelector(".pspoiler-inner");n.addEventListener("click",()=>{if(t.hasAttribute("data-open"))e.style.height=e.scrollHeight+"px",e.offsetHeight,e.style.height="0",t.removeAttribute("data-open"),n.setAttribute("aria-expanded","false");else{t.setAttribute("data-open",""),n.setAttribute("aria-expanded","true"),e.style.height=a.offsetHeight+"px";const i=()=>{e.style.height="auto",e.removeEventListener("transitionend",i)};e.addEventListener("transitionend",i)}})})}r();document.addEventListener("astro:after-swap",r);</script>
+<h3 id="инструкция-по-использованию"><span class="color-override" style="--c: #3669C4">Инструкция по использованию</span></h3>
+<ol>
+<li><em><strong>Откройте лаунчер PROFITON.</strong></em></li>
+<li><em><strong>Выберите Steam server-side authenticator из списка софтов.</strong></em></li>
+<li><em><strong>Конфигурация SSA (Подробное описание каждого параметра вы найдёте в разделе <code>Параметры, требующие заполнения</code>):</strong></em>
+<ul>
+<li>Перейдите в раздел конфигурации SSA.</li>
+<li>Заполните следующие параметры:
+<ul>
+<li><em><strong>Token</strong></em> (токен <em>Telegram</em>-бота)</li>
+<li><em><strong>Chat ID</strong></em> (идентификатор вашего чата в <em>Telegram</em>)</li>
+</ul>
+</li>
+<li>Сохраните конфигурацию и при необходимости перезапустите SSA.</li>
+</ul>
+</li>
+<li><em><strong>Добавление и управление аккаунтами Steam (Подробное описание каждого параметра вы найдёте в разделе <code>Параметры, требующие заполнения</code>):</strong></em>
+<ul>
+<li>Перейдите в раздел “Аккаунты”.</li>
+<li>Заполните следующие параметры:
+<ul>
+<li><em><strong>SteamID</strong></em></li>
+<li><em><strong>Alias</strong></em></li>
+<li><em><strong>Proxy (HTTP)</strong></em></li>
+<li><em><strong>Steam Password</strong></em></li>
+<li><em><strong>Market CS:GO API Key</strong></em></li>
+<li><em><strong>Status</strong></em></li>
+<li><em><strong>MaFile</strong></em></li>
+</ul>
+</li>
+<li>Управляйте аккаунтами:
+<ul>
+<li><strong>Добавление/удаление (<em>Add account/Delete account</em>)</strong></li>
+<li><strong>Редактирование параметров (двойной клик)</strong></li>
+<li><strong>Удаление <em>MaFile</em> (двойной клик)</strong></li>
+<li><strong>Включение/отключение (<em>Status</em>)</strong></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><em><strong>Запуск и активация:</strong></em>
+<ul>
+<li>Запустите привязанный <em>Telegram</em>-бот и активируйте его командой <code>/start</code>.</li>
+<li>Запустите <em>SSA</em> в лаунчере PROFITON.</li>
+<li>Дождитесь подтверждения подключения аккаунтов (<code>✅ #Alias: Account connected</code>).</li>
+</ul>
+</li>
+</ol>
+<div class="pspoiler"> <button type="button" class="pspoiler-trigger" aria-expanded="false"> <span style><strong>Кнопки Telegram-бота</strong></span> <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="pspoiler-chevron"><path d="m6 9 6 6 6-6"></path></svg> </button> <div class="pspoiler-content"> <div class="pspoiler-inner"> <ul>
+<li><code>guard</code> Генерирует коды <em>Steam Guard</em> для двухфакторной аутентификации.
+<ul>
+<li><em><strong>При первом добавлении аккаунта в SSA, если у вас ещё нет API-ключа Market CS:GO, вы можете оставить это поле пустым. Это позволит SSA подключиться через прокси и получить код Steam Guard для авторизации, необходимой для последующего создания API-ключа на сайте Market CS:GO.</strong></em></li>
+<li><em><strong>Не используйте публичный SDA для получения первого кода Steam Guard, так как это может привести к блокировке аккаунта системой антифрода Steam.</strong></em></li>
+</ul>
+</li>
+<li><code>confirmations</code>  Предоставляет список подтверждений аккаунта, необходимых для различных действий, таких как создание <em>API</em>-ключа, смена пароля <em>Steam</em> и т.д.</li>
+</ul> </div> </div> </div>  
+<div class="pspoiler"> <button type="button" class="pspoiler-trigger" aria-expanded="false"> <span style><strong>Когда нужен перезапуск</strong></span> <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="pspoiler-chevron"><path d="m6 9 6 6 6-6"></path></svg> </button> <div class="pspoiler-content"> <div class="pspoiler-inner"> <ul>
+<li><strong>Изменили конфигурацию</strong> → перезапустите <em>SSA</em>.</li>
+<li><strong>Добавили, удалили или изменили аккаунт</strong> → перезапустите <strong>все</strong> софты с этим аккаунтом.</li>
+<li><strong>Сменили индивидуальный прокси</strong> → обновите в <em>SSA</em>, перезапустите <strong>все</strong> софты с этим аккаунтом. Например, если не перезапустить <em>Steam Market селлер</em> и <em>Market CS:GO брокер</em>, они продолжат работать через старый IP.</li>
+<li><strong>Сменили прокси-пул</strong> (<em>Webshare</em>) → обновите в софтах, где он указан (например, <em>Steam Market селлер</em>, <em>Market CS:GO брокер</em>), и перезапустите их. В SSA прокси-пул не настраивается.</li>
+<li><strong>Сменили пароль <em>Steam</em> или <em>API</em>-ключ <em>Market CS:GO</em></strong> → перезапустите все софты с этим аккаунтом.</li>
+</ul><aside data-emoji="ℹ️"><p>Если открыли конфигурацию, ничего не изменили — перезапуск не нужен.</p></aside> </div> </div> </div>  
+<h3 id="вы-успешно-настроили-steam-server-side-authenticator-теперь-перейдите-к-следующему-этапу-️">Вы успешно настроили <em>Steam server-side authenticator</em>. Теперь перейдите к следующему этапу ➡️</h3>
+<hr/>
+<p><a href="/knowledge-base/setup-steam-seller"><em><strong>Настройка Steam Market селлер</strong></em></a></p>
+<hr/>
+<p><em>Актуализировано 15 марта 2026 года</em></p> </main> </div> <script>document.addEventListener('DOMContentLoaded', function() { document.documentElement.classList.add('ready'); });</script> </body> <script type="module" src="/assets/PLayout.astro_astro_type_script_index_0_lang.xv0VphLb.js"></script> <script>(function(){const iconMap = {"/app/bitskins-broker":"/images/bitskins.svg","/app/buff163-broker":"/images/buff-round.svg","/app/bundle-cs2-farm":"/images/steam-round.svg","/app/bundle-dmarket":"/images/steam-round.svg","/app/bundle-market-csgo":"/images/steam-round.svg","/app/dmarket-broker":"/images/dmarket.svg","/app/market-csgo-broker":"/images/csgotm.svg","/app/market-csgo-seller-cashout":"/images/csgotm.svg","/app/market-csgo-seller":"/images/csgotm.svg","/app/ssa":"/images/ssa.svg","/app/steam-seller":"/images/steam-round.svg","/knowledge-base/account-risks":"/images/steam-round.svg","/knowledge-base/concepts":"/images/steam-round.svg","/knowledge-base/cs2-farm-percentages":"/images/steam-round.svg","/knowledge-base":"/images/book.svg","/knowledge-base/market-csgo-profit":"/images/steam-round.svg","/knowledge-base/market-csgo-theory":"/images/steam-round.svg","/knowledge-base/market-seasons":"/images/steam-round.svg","/knowledge-base/setup-dmarket-broker":"/images/dmarket.svg","/knowledge-base/setup-market-csgo-broker":"/images/csgotm.svg","/knowledge-base/setup-market-csgo-seller-cashout":"/images/csgotm.svg","/knowledge-base/setup-market-csgo-seller":"/images/csgotm.svg","/knowledge-base/setup-ssa":"/images/ssa.svg","/knowledge-base/setup-steam-seller":"/images/steam-round.svg","/knowledge-base/steam-security":"/images/steam-round.svg","/license":"/images/lic.svg","/referral":"/images/ref.svg","/reviews":"/images/book.svg","/steam-ecosystem":"/images/steam-round.svg","/test":"/images/book.svg"};
+
+    document.querySelectorAll('.prose a:not(.pswp-gallery a):not(.landing-card)').forEach(link => {
+      const href = link.getAttribute('href') || '';
+      let iconSrc = null;
+
+      if (href.startsWith('/')) {
+        const path = href.replace(/\/$/, '');
+        iconSrc = iconMap[path] || '/favicon.ico';
+      } else if (href.includes('t.me/')) {
+        iconSrc = '/images/tg-round.svg';
+      }
+
+      // External links open in new tab
+      if (!href.startsWith('/') && !href.startsWith('#')) {
+        link.setAttribute('target', '_blank');
+        link.setAttribute('rel', 'noopener noreferrer');
+      }
+
+      if (iconSrc && !link.querySelector('.link-icon')) {
+        const img = document.createElement('img');
+        img.src = iconSrc;
+        img.className = 'link-icon';
+        img.alt = '';
+        // Wrap icon in nowrap span with zero-width joiner to bind to first character
+        const wrap = document.createElement('span');
+        wrap.style.whiteSpace = 'nowrap';
+        wrap.appendChild(img);
+        wrap.appendChild(document.createTextNode('\u2060')); // word-joiner (invisible, prevents break)
+        link.prepend(wrap);
+      }
+    });
+  })();</script> <script type="module">const s=document.getElementById("theme-toggle");function d(){return window.matchMedia("(prefers-color-scheme: dark)").matches?"night":"day"}function i(t){document.documentElement.setAttribute("data-theme",t)}s.addEventListener("click",()=>{const e=document.documentElement.getAttribute("data-theme")==="day"?"night":"day";e===d()?localStorage.setItem("theme_linked","true"):localStorage.setItem("theme_linked","false"),localStorage.setItem("theme",e),i(e)});const l=document.getElementById("tg-toggle"),o=document.getElementById("tg-popup");document.querySelectorAll(".tg-handle").forEach(t=>{let e;t.addEventListener("touchstart",()=>{e=setTimeout(()=>{const n=document.createRange();n.selectNodeContents(t);const c=window.getSelection();c?.removeAllRanges(),c?.addRange(n)},500)}),t.addEventListener("touchend",()=>clearTimeout(e)),t.addEventListener("touchmove",()=>clearTimeout(e))});document.querySelectorAll(".tg-link").forEach(t=>{t.addEventListener("click",()=>{const e=window.getSelection();if(e&&e.toString().length>0)return;const n=t.dataset.href;n&&window.open(n,"_blank")})});function a(){const e=document.querySelector(".navbar").getBoundingClientRect();o.style.top=e.bottom+10+"px",o.style.right=document.documentElement.clientWidth-e.right+"px"}l.addEventListener("click",t=>{t.stopPropagation(),o.classList.toggle("open")&&a()});window.addEventListener("resize",()=>{o.classList.contains("open")&&a()});document.addEventListener("click",t=>{o.classList.contains("open")&&!o.contains(t.target)&&o.classList.remove("open")});window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change",t=>{const e=t.matches?"night":"day",n=localStorage.getItem("theme_linked")!=="false",c=document.documentElement.getAttribute("data-theme");n?(localStorage.setItem("theme",e),i(e)):e===c&&localStorage.setItem("theme_linked","true")});</script> </html>
