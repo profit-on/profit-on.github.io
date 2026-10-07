@@ -1,0 +1,97 @@
+<!DOCTYPE html><html lang="ru"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><link rel="icon" href="/favicon.ico" sizes="32x32"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><title>Импорт и экспорт CSV</title><meta name="description" content="Формат CSV-файла для импорта и экспорта аккаунтов Steam в лаунчере PROFITON."><meta property="og:type" content="website"><meta property="og:site_name" content="PROFITON"><meta property="og:title" content="Импорт и экспорт CSV"><meta property="og:description" content="Формат CSV-файла для импорта и экспорта аккаунтов Steam в лаунчере PROFITON."><meta property="og:image" content="https://profiton.org/images/profiton.png"><meta property="og:image:width" content="1500"><meta property="og:image:height" content="1500"><link rel="alternate" type="text/markdown" href="/csv/index.md"><link rel="describedby" type="text/plain" href="/llms.txt"><link rel="preload" href="/images/header-icons.svg" as="image"><script>
+      (function() {
+        var linked = localStorage.getItem('theme_linked') !== 'false';
+        var deviceTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'night' : 'day';
+        var theme = linked ? deviceTheme : (localStorage.getItem('theme') || deviceTheme);
+        document.documentElement.setAttribute('data-theme', theme);
+      })();
+    </script><link rel="stylesheet" href="/assets/gallery-viewer.CX5_4vWt.css"><link rel="stylesheet" href="/assets/PLayout.BCHJ4ezO.css"></head><body><div class="navbar-wrap"><nav class="navbar glass"><a href="/" class="navbar-brand"><img src="/images/profiton.svg" alt="PROFITON" class="navbar-logo"><span class="navbar-title has-page">PROFITON</span></a><span class="navbar-sep">&bull;</span><span class="navbar-page"><img src="/images/book.svg" alt="" class="navbar-page-icon"><span class="navbar-page-title">Импорт и экспорт CSV</span></span><button id="tg-toggle" class="tg-toggle" type="button" aria-label="Telegram"><span class="tg-btn-icon"></span></button><button id="theme-toggle" class="theme-toggle" type="button" aria-label="Переключить тему"><svg class="icon-day" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg><svg class="icon-night" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg></button></nav></div><div id="tg-popup" class="tg-popup glass"><div class="tg-link" data-href="https://t.me/ProfitonSupport"><span>Техподдержка</span><img src="/images/tg-round.svg" class="tg-icon" alt=""><span class="tg-handle">@ProfitonSupport</span></div><div class="tg-link" data-href="https://t.me/Profiton_Chat"><span>Чат сообщества</span><img src="/images/tg-round.svg" class="tg-icon" alt=""><span class="tg-handle">@Profiton_Chat</span></div><div class="tg-link" data-href="https://t.me/Profiton_News"><span>Новостной канал</span><img src="/images/tg-round.svg" class="tg-icon" alt=""><span class="tg-handle">@Profiton_News</span></div></div><div class="page-wrap"><header class="site-header"><div class="header-banner"><div class="header-left"><div class="header-text"><img src="/images/profiton-no-bg.svg" alt="P" class="header-p-icon"><span class="header-rofiton">ROFITON</span></div></div><div class="header-right"><img src="/images/header-icons.svg" alt="" class="header-icons"></div></div></header><main class="prose"><h1><img src="/images/book.svg" alt="" class="page-icon"><span>Импорт и экспорт аккаунтов CSV в лаунчере PROFITON</span></h1><aside data-emoji="ℹ️"><p>Формат CSV-файла для импорта и экспорта аккаунтов Steam в лаунчере PROFITON.</p></aside>
+<hr/>
+<h2 id="пример-аккаунта"><span class="color-override" style="--c: #3669C4">Пример аккаунта</span></h2>
+<p><strong>1 строка → 1 аккаунт.</strong> Каждая строка CSV описывает один аккаунт Steam.</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="plaintext"><code><span class="line"><span>&quot;70000000000000005&quot;,&quot;acc5&quot;,&quot;http://login:password@proxy.com:1234&quot;,&quot;SteamPassword&quot;,&quot;MarketApiKey&quot;,1</span></span></code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Позиция</th><th>Параметр</th></tr></thead><tbody><tr><td>1</td><td>Steam ID</td></tr><tr><td>2</td><td>Alias</td></tr><tr><td>3</td><td>Proxy</td></tr><tr><td>4</td><td>Password</td></tr><tr><td>5</td><td>Market CS:GO API Key</td></tr><tr><td>6</td><td>SSA ID</td></tr></tbody></table>
+<warn><p><strong>Все параметры должны быть <span class="mark-highlight" style="--mark-bg: rgba(0,0,0,0.1)">в кавычках</span> (кроме SSA ID)!</strong></p><p><strong><span class="mark-highlight" style="--mark-bg: rgba(54, 105, 196, 0.15)">Обязательны</span> все шесть позиций в строке.</strong> Password и Market CS:GO API Key могут быть пустыми: если значение не используется, укажите <span class="mark-highlight" style="--mark-bg: rgba(0,0,0,0.1)">пустые кавычки</span> <code>&quot;&quot;</code>.</p></warn>
+<hr/>
+<h2 id="steam-id"><span class="color-override" style="--c: #3669C4">Steam ID</span></h2>
+<p>Уникальный идентификатор аккаунта Steam. Должен <strong>начинаться с 7</strong> и <strong>иметь длину 17 символов</strong>.</p>
+<hr/>
+<h2 id="alias"><span class="color-override" style="--c: #3669C4">Alias</span></h2>
+<p>Внутреннее название аккаунта в лаунчере. <strong>Минимальная длина - 3 символа</strong>.</p>
+<hr/>
+<h2 id="proxy"><span class="color-override" style="--c: #3669C4">Proxy</span></h2>
+<p>Индивидуальный прокси аккаунта. Должен подходить под <strong>один из шаблонов</strong>:</p>
+<ul>
+<li><code>http://login:password@proxy.com:1234</code></li>
+<li><code>http://login:password@11.22.33.44:1234</code></li>
+<li><code>socks5://login:password@proxy.com:1234</code></li>
+<li><code>socks5://login:password@11.22.33.44:1234</code></li>
+</ul>
+<p>Как выбрать прокси, описано в разделе <a href="/knowledge-base#%D0%BF%D1%80%D0%BE%D0%BA%D1%81%D0%B8"><span class="link-icon-wrap"><img src="/images/book.svg" class="link-icon" alt/>⁠</span><em><strong>Прокси</strong></em></a> базы знаний.</p>
+<hr/>
+<h2 id="password"><span class="color-override" style="--c: #3669C4">Password</span></h2>
+<p>Пароль от аккаунта Steam. Минимальной длины нет, максимальная - <strong>50 символов</strong>. Если пароль не указывается, вставьте пустые кавычки: <code>&quot;&quot;</code>.</p>
+<hr/>
+<h2 id="market-csgo-api-key"><span class="color-override" style="--c: #3669C4">Market CS:GO API Key</span></h2>
+<p>API-ключ Market CS:GO. Минимальной длины нет, максимальная - <strong>50 символов</strong>. Если ключ не указывается, вставьте пустые кавычки: <code>&quot;&quot;</code>.</p>
+<hr/>
+<h2 id="ssa-id"><span class="color-override" style="--c: #3669C4">SSA ID</span></h2>
+<p>Статус аккаунта и привязка к экземпляру SSA (Steam server-side authenticator). Единственный параметр <strong>без кавычек</strong>.</p>
+<p><strong>Если у вас 1 SSA:</strong></p>
+<ul>
+<li><code>0</code> → аккаунт выключен</li>
+<li><code>1</code> → аккаунт включён</li>
+</ul>
+<p>Другие цифры недопустимы, аккаунт не будет принят системой.</p>
+<p><strong>Если у вас 2 и более SSA:</strong></p>
+<ul>
+<li><code>0</code> → аккаунт выключен</li>
+<li><code>1</code> → аккаунт включён и привязан к SSA 1</li>
+<li><code>2</code> → аккаунт включён и привязан к SSA 2</li>
+<li>и так далее</li>
+</ul>
+<p>Допустимо использовать только те цифры, сколько у вас имеется SSA.</p>
+<hr/></main><footer class="site-footer"><div class="landing-grid landing-grid-3"><a href="https://t.me/ProfitonSupport" class="landing-card landing-card-sm" target="_blank" rel="noopener noreferrer"><div class="landing-card-icon">💬</div><div class="landing-card-title">Техподдержка</div><div class="landing-card-desc">Ответим на любой вопрос</div><div class="landing-card-tg"><img src="/images/tg-round.svg" class="landing-tg-icon" alt="">@ProfitonSupport</div></a><a href="https://t.me/Profiton_Chat" class="landing-card landing-card-sm" target="_blank" rel="noopener noreferrer"><div class="landing-card-icon">👥</div><div class="landing-card-title">Чат сообщества</div><div class="landing-card-desc">Общение и обмен опытом</div><div class="landing-card-tg"><img src="/images/tg-round.svg" class="landing-tg-icon" alt="">@Profiton_Chat</div></a><a href="https://t.me/Profiton_News" class="landing-card landing-card-sm" target="_blank" rel="noopener noreferrer"><div class="landing-card-icon">📢</div><div class="landing-card-title">Новостной канал</div><div class="landing-card-desc">Обновления и анонсы</div><div class="landing-card-tg"><img src="/images/tg-round.svg" class="landing-tg-icon" alt="">@Profiton_News</div></a></div><p class="site-footer-copy">© PROFITON 2023-<span id="footer-year">2026</span></p></footer></div><script>
+    // Год берётся из заголовка Date ответа сервера, а не из часов посетителя; при ошибке остаётся год сборки.
+    (function() {
+      var el = document.getElementById('footer-year');
+      if (!el) return;
+      fetch('/favicon.ico', { method: 'HEAD', cache: 'no-store' }).then(function(r) {
+        var year = new Date(r.headers.get('Date') || '').getUTCFullYear();
+        if (!isNaN(year)) el.textContent = String(Math.min(2099, Math.max(2026, year)));
+      }).catch(function() {});
+    })();
+  </script><script type="module" src="/assets/PLayout.astro_astro_type_script_index_0_lang.DSq_gnpy.js"></script><script type="module">var e=document.getElementById(`theme-toggle`);function t(){return window.matchMedia(`(prefers-color-scheme: dark)`).matches?`night`:`day`}function n(e){document.documentElement.setAttribute(`data-theme`,e)}e.addEventListener(`click`,()=>{let e=document.documentElement.getAttribute(`data-theme`)===`day`?`night`:`day`;e===t()?localStorage.setItem(`theme_linked`,`true`):localStorage.setItem(`theme_linked`,`false`),localStorage.setItem(`theme`,e),n(e)});var r=document.getElementById(`tg-toggle`),i=document.getElementById(`tg-popup`);document.querySelectorAll(`.tg-handle`).forEach(e=>{let t;e.addEventListener(`touchstart`,()=>{t=setTimeout(()=>{let t=document.createRange();t.selectNodeContents(e);let n=window.getSelection();n?.removeAllRanges(),n?.addRange(t)},500)}),e.addEventListener(`touchend`,()=>clearTimeout(t)),e.addEventListener(`touchmove`,()=>clearTimeout(t))}),document.querySelectorAll(`.tg-link`).forEach(e=>{e.addEventListener(`click`,()=>{let t=window.getSelection();if(t&&t.toString().length>0)return;let n=e.dataset.href;n&&window.open(n,`_blank`)})});function a(){let e=document.querySelector(`.navbar`).getBoundingClientRect();i.style.top=e.bottom+10+`px`,i.style.right=document.documentElement.clientWidth-e.right+`px`}r.addEventListener(`click`,e=>{e.stopPropagation(),i.classList.toggle(`open`)&&a()}),window.addEventListener(`resize`,()=>{i.classList.contains(`open`)&&a()}),document.addEventListener(`click`,e=>{i.classList.contains(`open`)&&!i.contains(e.target)&&i.classList.remove(`open`)}),window.matchMedia(`(prefers-color-scheme: dark)`).addEventListener(`change`,e=>{let t=e.matches?`night`:`day`,r=localStorage.getItem(`theme_linked`)!==`false`,i=document.documentElement.getAttribute(`data-theme`);r?(localStorage.setItem(`theme`,t),n(t)):t===i&&localStorage.setItem(`theme_linked`,`true`)});</script></body></html>

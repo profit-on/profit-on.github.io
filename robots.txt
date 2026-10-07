@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://profiton.org/sitemap.xml

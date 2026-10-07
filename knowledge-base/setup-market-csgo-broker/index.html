@@ -1,0 +1,190 @@
+<!DOCTYPE html><html lang="ru"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><link rel="icon" href="/favicon.ico" sizes="32x32"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><title>Настройка Market CS:GO брокер</title><meta name="description" content="Market CS:GO брокер — софт для покупки и передачи игровых предметов с установленным вами процентом доходности с Торговой площадки market.csgo.com, market.dota2.net и rust.tm на ваш аккаунт Steam."><meta property="og:type" content="website"><meta property="og:site_name" content="PROFITON"><meta property="og:title" content="База знаний • Настройка Market CS:GO брокер"><meta property="og:description" content="Market CS:GO брокер — софт для покупки и передачи игровых предметов с установленным вами процентом доходности с Торговой площадки market.csgo.com, market.dota2.net и rust.tm на ваш аккаунт Steam."><meta property="og:image" content="https://profiton.org/images/profiton.png"><meta property="og:image:width" content="1500"><meta property="og:image:height" content="1500"><meta name="robots" content="noindex, follow"><link rel="alternate" type="text/markdown" href="/knowledge-base/setup-market-csgo-broker/index.md"><link rel="describedby" type="text/plain" href="/llms.txt"><link rel="preload" href="/images/header-icons.svg" as="image"><script>
+      (function() {
+        var linked = localStorage.getItem('theme_linked') !== 'false';
+        var deviceTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'night' : 'day';
+        var theme = linked ? deviceTheme : (localStorage.getItem('theme') || deviceTheme);
+        document.documentElement.setAttribute('data-theme', theme);
+      })();
+    </script><link rel="stylesheet" href="/assets/gallery-viewer.CX5_4vWt.css"><link rel="stylesheet" href="/assets/PLayout.BCHJ4ezO.css"></head><body><div class="navbar-wrap"><nav class="navbar glass"><a href="/" class="navbar-brand"><img src="/images/profiton.svg" alt="PROFITON" class="navbar-logo"></a><span class="navbar-sep">&bull;</span><a href="/knowledge-base" class="navbar-section"><img src="/images/book.svg" alt="" class="navbar-page-icon"><span class="navbar-section-title">База знаний</span></a><span class="navbar-sep">&bull;</span><span class="navbar-page"><img src="/images/csgotm.svg" alt="" class="navbar-page-icon"><span class="navbar-page-title">Настройка Market CS:GO брокер</span></span><button id="tg-toggle" class="tg-toggle" type="button" aria-label="Telegram"><span class="tg-btn-icon"></span></button><button id="theme-toggle" class="theme-toggle" type="button" aria-label="Переключить тему"><svg class="icon-day" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg><svg class="icon-night" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg></button></nav></div><div id="tg-popup" class="tg-popup glass"><div class="tg-link" data-href="https://t.me/ProfitonSupport"><span>Техподдержка</span><img src="/images/tg-round.svg" class="tg-icon" alt=""><span class="tg-handle">@ProfitonSupport</span></div><div class="tg-link" data-href="https://t.me/Profiton_Chat"><span>Чат сообщества</span><img src="/images/tg-round.svg" class="tg-icon" alt=""><span class="tg-handle">@Profiton_Chat</span></div><div class="tg-link" data-href="https://t.me/Profiton_News"><span>Новостной канал</span><img src="/images/tg-round.svg" class="tg-icon" alt=""><span class="tg-handle">@Profiton_News</span></div></div><div class="page-wrap"><header class="site-header"><div class="header-banner"><div class="header-left"><div class="header-text"><img src="/images/profiton-no-bg.svg" alt="P" class="header-p-icon"><span class="header-rofiton">ROFITON</span></div></div><div class="header-right"><img src="/images/header-icons.svg" alt="" class="header-icons"></div></div></header><main class="prose"><h1><img src="/images/csgotm.svg" alt="" class="page-icon"><span>Настройка Market CS:GO брокер</span></h1><h2 id="теоретические-основы"><span class="color-override" style="--c: #3669C4">Теоретические основы</span></h2>
+<p>Market CS:GO брокер — софт для покупки и передачи игровых предметов с установленным вами процентом доходности с Торговой площадки <a href="https://market.csgo.com" target="_blank" rel="noopener noreferrer"><em>market.csgo.com</em></a>, <a href="https://market.dota2.net" target="_blank" rel="noopener noreferrer"><em>market.dota2.net</em></a> и <a href="https://rust.tm" target="_blank" rel="noopener noreferrer"><em>rust.tm</em></a> на ваш аккаунт Steam.</p>
+<h2 id="практическая-настройка"><span class="color-override" style="--c: #3669C4">Практическая настройка</span></h2>
+<yellow><p><strong>При необходимости вы можете вернуться к исходной конфигурации. Для этого в окне редактирования конфигурации нажмите правой кнопкой мыши и выберите пункт «Вернуть шаблонную конфигурацию».</strong></p></yellow>
+<aside data-emoji="ℹ️"><p>В конфигурации используются два типа прокси. <strong>Индивидуальный прокси</strong> — выделенный IP-адрес, через который аккаунт Steam выполняет всю торговую работу (листинги, ордера на покупку, трейды). Оптимально один аккаунт на один IP, если аккаунтов много — допустимо до 2-3 на один адрес, но чем больше аккаунтов делят IP, тем выше суммарная нагрузка запросами и риск блокировки адреса со стороны Steam (ошибка 429, слишком много запросов). <strong>Прокси-пул</strong> (Webshare) — отдельный пул IP-адресов, который софты используют для многопоточного парсинга цен по всем торговым площадкам, работает полностью независимо от аккаунтов Steam и не расходует их лимиты запросов. Как выбрать и проверить прокси, описано в разделе <a href="/knowledge-base#%D0%BF%D1%80%D0%BE%D0%BA%D1%81%D0%B8"><span class="link-icon-wrap"><img src="/images/book.svg" class="link-icon" alt/>⁠</span><em><strong>Прокси</strong></em></a> базы знаний.</p></aside>
+<div class="pspoiler"><button type="button" class="pspoiler-trigger" aria-expanded="false"><span style><strong>Параметры, требующие заполнения</strong></span><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="pspoiler-chevron"><path d="m6 9 6 6 6-6"></path></svg></button><div class="pspoiler-content"><div class="pspoiler-inner"><pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="plaintext"><code><span class="line"><span># Токен вашего Телеграм-бота (Обязательное поле).</span></span>
+<span class="line"><span>  token:</span></span></code></pre><p>Токен Telegram-бота - уникальный ключ, который выдается при создании бота. Создайте бота через <em>@BotFather</em> и скопируйте токен.</p><ul>
+<li>Откройте мессенджер Telegram на своем устройстве (смартфон, планшет или компьютер).</li>
+<li>В поисковой строке Telegram найдите аккаунт <em>@BotFather (<a href="https://t.me/BotFather" target="_blank" rel="noopener noreferrer"><span class="link-icon-wrap"><img src="/images/tg-round.svg" class="link-icon" alt/>⁠</span>https://t.me/BotFather</a>)</em>. Он является официальным сервисом для создания и настройки ботов.</li>
+<li>Откройте диалог с <em>@BotFather</em> и начните общение с ним, нажав кнопку <em>”Start”</em> или отправив команду <em>/start</em>.</li>
+<li>Для создания нового бота отправьте команду <em>/newbot</em>.</li>
+<li>Следуйте инструкциям <em>@BotFather</em>:
+<ul>
+<li>Введите имя вашего бота. Это отображаемое имя, которое видят пользователи.</li>
+<li>Введите уникальное имя пользователя для бота. Оно должно заканчиваться на «<em>bot</em>» или «<em>_bot</em>» и быть уникальным в рамках всей платформы Telegram.</li>
+</ul>
+</li>
+<li>Если все введенные данные корректны, <em>@BotFather</em> создаст вашего бота и предоставит вам его токен доступа. Этот токен является ключом для управления ботом и обязателен для настройки и использования бота. Сохраните его в безопасном месте.</li>
+</ul><warn><p><strong>Для каждого софта обязательно создайте отдельного Telegram-бота. Нарушение этого правила приведёт к некорректной работе и ошибкам.</strong></p></warn><pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="plaintext"><code><span class="line"><span># Ваш чат ID в Телеграме (Обязательное поле).</span></span>
+<span class="line"><span>  chat_id:</span></span></code></pre><p>“<em>Chat ID”</em> - идентификатор вашего чата в Телеграме.</p><ul>
+<li>Откройте мессенджер Telegram на своем устройстве (смартфон, планшет или компьютер).</li>
+<li>В поисковой строке Telegram найдите аккаунт <em>@getmyid_bot (<a href="https://t.me/getmyid_bot" target="_blank" rel="noopener noreferrer"><span class="link-icon-wrap"><img src="/images/tg-round.svg" class="link-icon" alt/>⁠</span>https://t.me/getmyid_bot</a>)</em>.</li>
+<li>Откройте диалог с <em>@getmyid_bot</em> и начните общение с ним, нажав кнопку <em>”Start”</em> или отправив команду <em>/start</em>.</li>
+<li>Если все сделано корректно, бот предоставит ваш Chat ID.</li>
+</ul><pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="plaintext"><code><span class="line"><span># Язык всех сообщений и кнопок Телеграм-бота (ru - русский, en - английский).</span></span>
+<span class="line"><span>  language: ru</span></span></code></pre><p><strong>«Language»</strong> задаёт язык всех сообщений и кнопок Telegram-бота. Укажите <em>ru</em> для русского языка или <em>en</em> для английского.</p><pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="plaintext"><code><span class="line"><span>sources:</span></span>
+<span class="line"><span>    - (http)</span></span></code></pre><p><em>”Прокси-пул”</em> - набор прокси-серверов для парсинга цен, не нагружает индивидуальные прокси ваших аккаунтов и не взаимодействует с аккаунтами Steam.</p><ul>
+<li>После покупки прокси-пула, вам будет предоставлена ссылка на список прокси-серверов.</li>
+<li>Добавьте полученную ссылку в соответствующее поле конфигурации софта.</li>
+</ul><aside data-emoji="ℹ️"><p>Прокси-пул приобретается на Webshare согласно <a href="/knowledge-base/proxy-guide"><span class="link-icon-wrap"><img src="/images/webshare.svg" class="link-icon" alt/>⁠</span><em><strong>руководству по покупке</strong></em></a>. Если у вас нет зарубежной карты, зарегистрируйтесь и предоставьте нам логин и пароль.</p></aside><pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="plaintext"><code><span class="line"><span>  accounts:</span></span>
+<span class="line"><span># Список SteamID аккаунтов, которые будут использоваться программой (обязательное поле).</span></span>
+<span class="line"><span># Шаблон</span></span>
+<span class="line"><span>#  - 76561199083114143</span></span>
+<span class="line"><span>#  - 76567643082655732</span></span>
+<span class="line"><span># Убедитесь, что все поля аккаунтов заполнены. Незаполненные аккаунты необходимо удалить!</span></span>
+<span class="line"><span># Добавляйте аналогично любое количество аккаунтов, следуя шаблону.</span></span></code></pre><p><em>”Accounts”</em> - список SteamID аккаунтов, которые будут использоваться софтом. Необходимая информация (прокси, MaFile и т.д.) будет автоматически подтянута из раздела “Аккаунты” в Steam Server-Side Authenticator.</p></div></div></div>
+<div class="pspoiler"><button type="button" class="pspoiler-trigger" aria-expanded="false"><span style><strong>Пример корректно заполненной конфигурации</strong></span><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="pspoiler-chevron"><path d="m6 9 6 6 6-6"></path></svg></button><div class="pspoiler-content"><div class="pspoiler-inner"><pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="yaml"><code><span class="line"><span style="color:#85E89D">telegram</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#6A737D"># Токен вашего Телеграм-бота (Обязательное поле).</span></span>
+<span class="line"><span style="color:#85E89D">  token</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">6352854634:SYG783ifdiUhsuIUWkekiwuHUQ24w-GQT45</span></span>
+<span class="line"><span style="color:#6A737D"># Ваш чат ID в Телеграме (Обязательное поле).</span></span>
+<span class="line"><span style="color:#85E89D">  chat_id</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">2365344527</span></span>
+<span class="line"><span style="color:#6A737D"># Язык всех сообщений и кнопок Телеграм-бота (ru - русский, en - английский).</span></span>
+<span class="line"><span style="color:#85E89D">  language</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">ru</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D"># Фильтры для предметов разных ценовых диапазонов.</span></span>
+<span class="line"><span style="color:#6A737D"># Если хотя бы один раз изменить фильтры через Телеграм-бот, значения из лаунчера будут игнорироваться!</span></span>
+<span class="line"><span style="color:#85E89D">multi_filters</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D"># Фильтр 1: для предметов стоимостью от 0.01 до 5 рублей.</span></span>
+<span class="line"><span style="color:#E1E4E8">  - </span><span style="color:#85E89D">price</span><span style="color:#E1E4E8">: {</span><span style="color:#85E89D">lo</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">0.01</span><span style="color:#E1E4E8">, </span><span style="color:#85E89D">hi</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">5</span><span style="color:#E1E4E8">}</span></span>
+<span class="line"><span style="color:#6A737D"># Минимальный процент прибыли с продажи предметов в Steam с учетом комиссии торговой площадки [0.5 = 50%].</span></span>
+<span class="line"><span style="color:#85E89D">    min_profit</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">0.65</span></span>
+<span class="line"><span style="color:#6A737D"># Коэффициент смещения ожидаемой цены продажи предмета на торговой площадке Steam (от -1 до 1).</span></span>
+<span class="line"><span style="color:#6A737D"># По этой цене программа считает прибыль и решает, покупать ли предмет. На цену самой покупки не влияет.</span></span>
+<span class="line"><span style="color:#6A737D"># -1: цена автопокупки предмета в Steam,</span></span>
+<span class="line"><span style="color:#6A737D">#  0: середина между ценой автопокупки и минимальной ценой лота в Steam,</span></span>
+<span class="line"><span style="color:#6A737D">#  1: минимальная цена лота в Steam.</span></span>
+<span class="line"><span style="color:#85E89D">    price_offset</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">-0.25</span></span>
+<span class="line"><span style="color:#6A737D"># Фильтр для отсеивания переоцененных предметов. Коэффициент соотношения рыночной цены и ордера на покупку.</span></span>
+<span class="line"><span style="color:#6A737D"># Если разница между ними больше 37%, такая вещь не будет куплена.</span></span>
+<span class="line"><span style="color:#85E89D">    prices_diff_percent_limit</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">0.37</span></span>
+<span class="line"><span style="color:#6A737D"># Список ID игр, предметы из которых будут покупаться (730 - CS:GO, 570 - Dota 2, 252490 - Rust).</span></span>
+<span class="line"><span style="color:#85E89D">    game_filters</span><span style="color:#E1E4E8">: [</span><span style="color:#79B8FF">570</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">252490</span><span style="color:#E1E4E8">]</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D"># Фильтр 2: для предметов стоимостью от 5 до 50 рублей.</span></span>
+<span class="line"><span style="color:#E1E4E8">  - </span><span style="color:#85E89D">price</span><span style="color:#E1E4E8">: {</span><span style="color:#85E89D">lo</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">5</span><span style="color:#E1E4E8">, </span><span style="color:#85E89D">hi</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">50</span><span style="color:#E1E4E8">}</span></span>
+<span class="line"><span style="color:#85E89D">    min_profit</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">0.5</span></span>
+<span class="line"><span style="color:#85E89D">    price_offset</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">0.25</span></span>
+<span class="line"><span style="color:#85E89D">    prices_diff_percent_limit</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">0.27</span></span>
+<span class="line"><span style="color:#85E89D">    game_filters</span><span style="color:#E1E4E8">: [</span><span style="color:#79B8FF">570</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">252490</span><span style="color:#E1E4E8">]</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D"># Фильтр 3: для предметов стоимостью от 50 до 20000 рублей.</span></span>
+<span class="line"><span style="color:#E1E4E8">  - </span><span style="color:#85E89D">price</span><span style="color:#E1E4E8">: {</span><span style="color:#85E89D">lo</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">50</span><span style="color:#E1E4E8">, </span><span style="color:#85E89D">hi</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">20000</span><span style="color:#E1E4E8">}</span></span>
+<span class="line"><span style="color:#85E89D">    min_profit</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">0.5</span></span>
+<span class="line"><span style="color:#85E89D">    price_offset</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">0.25</span></span>
+<span class="line"><span style="color:#85E89D">    prices_diff_percent_limit</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">0.27</span></span>
+<span class="line"><span style="color:#85E89D">    game_filters</span><span style="color:#E1E4E8">: [</span><span style="color:#79B8FF">730</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">570</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">252490</span><span style="color:#E1E4E8">]</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#85E89D">filters</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#6A737D"># Минимальное количество продаж в день на Торговой площадке Steam.</span></span>
+<span class="line"><span style="color:#85E89D">  daily_volume</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">5</span></span>
+<span class="line"><span style="color:#6A737D"># Минимальная история продаж (в днях)</span></span>
+<span class="line"><span style="color:#85E89D">  min_sale_history_days</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">365</span></span>
+<span class="line"><span style="color:#6A737D"># Минимальное количество выставленных предметов на Торговой площадке Steam.</span></span>
+<span class="line"><span style="color:#85E89D">  onsale_volume</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">40</span></span>
+<span class="line"><span style="color:#6A737D"># Максимальное количество одинаковых предметов на один аккаунт Steam.</span></span>
+<span class="line"><span style="color:#85E89D">  duplicate_limit</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">2</span></span>
+<span class="line"><span style="color:#6A737D"># Максимальное количество одинаковых предметов на всех аккаунтах.</span></span>
+<span class="line"><span style="color:#85E89D">  duplicates_limit</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">7</span></span>
+<span class="line"><span style="color:#6A737D"># Минимальное количество выставленных ордеров на покупку на Торговой площадке Steam.</span></span>
+<span class="line"><span style="color:#85E89D">  buyorders_volume</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">5</span></span>
+<span class="line"><span style="color:#6A737D"># Черный список по типу предметов (только для CS2).</span></span>
+<span class="line"><span style="color:#85E89D">  items_blacklist</span><span style="color:#E1E4E8">: [</span><span style="color:#9ECBFF">&quot;Souvenir&quot;</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">&quot;Sticker&quot;</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">&quot;Container&quot;</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">&quot;Knife&quot;</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">&quot;Graffiti&quot;</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">&quot;Music Kit&quot;</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">&quot;Patch&quot;</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">&quot;Collectible&quot;</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">&quot;Pass&quot;</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">&quot;Charm&quot;</span><span style="color:#E1E4E8">]</span></span>
+<span class="line"><span style="color:#6A737D"># Черный список по коллекциям (только для CS2).</span></span>
+<span class="line"><span style="color:#85E89D">  set_blacklist</span><span style="color:#E1E4E8">: [</span><span style="color:#9ECBFF">&quot;The Train 2025 Collection&quot;</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">&quot;The Ascent Collection&quot;</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">&quot;The Boreal Collection&quot;</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">&quot;The Radiant Collection&quot;</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">&quot;The Fever Collection&quot;</span><span style="color:#E1E4E8">]</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D"># Список предметов, исключённых из покупки (формат: Название предмета:::ID игры).</span></span>
+<span class="line"><span style="color:#85E89D">  excludes</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#E1E4E8">    - </span><span style="color:#9ECBFF">Artificer&#39;s Hammer:::570</span></span>
+<span class="line"><span style="color:#E1E4E8">    - </span><span style="color:#9ECBFF">Artificer&#39;s Chisel:::570</span></span>
+<span class="line"><span style="color:#E1E4E8">    - </span><span style="color:#9ECBFF">Master Artificer&#39;s Hammer:::570</span></span>
+<span class="line"><span style="color:#E1E4E8">    - </span><span style="color:#9ECBFF">Genuine Weather Spring:::570</span></span>
+<span class="line"><span style="color:#E1E4E8">    - </span><span style="color:#9ECBFF">Genuine Weather Ash:::570</span></span>
+<span class="line"><span style="color:#E1E4E8">    - </span><span style="color:#9ECBFF">Genuine Weather Moonbeam:::570</span></span>
+<span class="line"><span style="color:#E1E4E8">    - </span><span style="color:#9ECBFF">Genuine Weather Sirocco:::570</span></span>
+<span class="line"><span style="color:#E1E4E8">    - </span><span style="color:#9ECBFF">Genuine Weather Aurora:::570</span></span>
+<span class="line"><span style="color:#E1E4E8">    - </span><span style="color:#9ECBFF">Genuine Weather Snow:::570</span></span>
+<span class="line"><span style="color:#E1E4E8">    - </span><span style="color:#9ECBFF">Genuine Weather Rain:::570</span></span>
+<span class="line"><span style="color:#E1E4E8">    - </span><span style="color:#9ECBFF">Genuine Weather Harvest:::570</span></span>
+<span class="line"><span style="color:#E1E4E8">    - </span><span style="color:#9ECBFF">Genuine Weather Pestilence:::570</span></span>
+<span class="line"><span style="color:#E1E4E8">    - </span><span style="color:#9ECBFF">Desert Eagle | Heat Treated:::730</span></span>
+<span class="line"><span style="color:#E1E4E8">    - </span><span style="color:#9ECBFF">XM1014 | Solitude:::730</span></span>
+<span class="line"><span style="color:#E1E4E8">    - </span><span style="color:#9ECBFF">Fever Case:::730</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#85E89D">market</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#85E89D">  urls</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#6A737D"># Список торговых площадок и их API-адресов для покупки предметов (730 - CS:GO, 570 - Dota 2, 252490 - Rust).</span></span>
+<span class="line"><span style="color:#79B8FF">    730</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">https://market.csgo.com/api</span></span>
+<span class="line"><span style="color:#79B8FF">    570</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">https://market.dota2.net/api</span></span>
+<span class="line"><span style="color:#79B8FF">    252490</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">https://rust.tm/api</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#85E89D">  accounts</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#6A737D"># Список SteamID аккаунтов, которые будут использоваться программой (обязательное поле).</span></span>
+<span class="line"><span style="color:#6A737D"># Шаблон</span></span>
+<span class="line"><span style="color:#6A737D">#  - 76561199083114143</span></span>
+<span class="line"><span style="color:#6A737D">#  - 76567643082655732</span></span>
+<span class="line"><span style="color:#E1E4E8">  - </span><span style="color:#79B8FF">76561199083114143</span></span>
+<span class="line"><span style="color:#E1E4E8">  - </span><span style="color:#79B8FF">76567643082655732</span></span>
+<span class="line"><span style="color:#6A737D"># Убедитесь, что все поля аккаунтов заполнены. Незаполненные аккаунты необходимо удалить!</span></span>
+<span class="line"><span style="color:#6A737D"># Добавляйте аналогично любое количество аккаунтов, следуя шаблону.</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#85E89D">proxy</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#6A737D"># Ссылка на пул прокси (обязательное поле).</span></span>
+<span class="line"><span style="color:#6A737D"># Пример формата: - (http) https://proxy.webshare.io/api/v2/proxy/list/download/dvjevsscsqmeywegdjobpllxyuqxeqwrmyluv/-/any/username/direct/-/</span></span>
+<span class="line"><span style="color:#85E89D">  sources</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#E1E4E8">    - </span><span style="color:#9ECBFF">(http) https://proxy.webshare.io/api/v2/proxy/list/download/dvjevsscsqmeywegdjobpllxyuqxeqwrmyluv/-/any/username/direct/-/</span></span></code></pre></div></div></div>
+<h3 id="инструкция-по-использованию"><span class="color-override" style="--c: #3669C4"><strong>Инструкция по использованию</strong></span></h3>
+<ol>
+<li><em><strong>Откройте лаунчер PROFITON.</strong></em></li>
+<li><em><strong>Выберите Market CS:GO брокер из списка софтов.</strong></em></li>
+<li><em><strong>Конфигурация Market CS:GO брокер (подробное описание каждого параметра вы найдете в разделе <code>Параметры, требующие заполнения</code>):</strong></em>
+<ul>
+<li>Перейдите в раздел конфигурации Market CS:GO брокер.</li>
+<li>Заполните следующие параметры:
+<ul>
+<li><strong><em>Token</em> (токен Telegram-бота)</strong></li>
+<li><strong><em>Chat ID</em> (идентификатор вашего чата в Telegram)</strong></li>
+<li><em><strong>language</strong></em> (язык сообщений и кнопок Telegram-бота)</li>
+<li><strong><em>sources</em> (ссылка на прокси-пул)</strong></li>
+<li><em><strong>accounts</strong></em> (список SteamID, которые будут использоваться софтом)</li>
+</ul>
+</li>
+<li>Сохраните конфигурацию и при необходимости перезапустите Market CS:GO брокер.</li>
+</ul>
+</li>
+<li><strong>Запуск и активация:</strong>
+<ul>
+<li>Запустите привязанный Telegram-бот и активируйте его командой <code>/start</code>.</li>
+<li>Запустите Market CS:GO брокер в лаунчере PROFITON или через Telegram-бота.</li>
+<li>Дождитесь подтверждения подключения аккаунтов (<code>✅ #Alias: Account connected</code>).</li>
+</ul>
+</li>
+</ol>
+<p><em><strong>⚠️ Примечание: Убедитесь, что все аккаунты, указанные в параметре <code>accounts</code>, добавлены и активированы в Steam Server-Side Authenticator.</strong></em></p>
+<p>⚠️ <em><strong>Внимание! Для защиты вашего аккаунта Market CS:GO и безопасного вывода средств установите платёжный пароль: <a href="https://market-old.csgo.com/checkout/password/useold/" target="_blank" rel="noopener noreferrer">https://market-old.csgo.com/checkout/password/useold/</a>. (Восстановление забытого пароля может занять до 10 дней, поэтому сохраните его в надёжном месте.)</strong></em></p>
+<p>⚠️  <em><strong>Внимание! Убедитесь, что на Market CS:GO установлена валюта RUB (российский рубль). Использование другой валюты приведёт к неработоспособности софта.</strong></em></p>
+<div class="pspoiler"><button type="button" class="pspoiler-trigger" aria-expanded="false"><span style><strong>Когда нужен перезапуск</strong></span><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="pspoiler-chevron"><path d="m6 9 6 6 6-6"></path></svg></button><div class="pspoiler-content"><div class="pspoiler-inner"><ul>
+<li><strong>Изменили конфигурацию</strong> → перезапустите Market CS:GO брокер.</li>
+<li><strong>Добавили, удалили или изменили аккаунт</strong> → перезапустите <strong>все</strong> софты с этим аккаунтом.</li>
+<li><strong>Сменили индивидуальный прокси</strong> → обновите в SSA, перезапустите <strong>все</strong> софты с этим аккаунтом. Например, если не перезапустить Steam Market селлер и Market CS:GO брокер, они продолжат работать через старый IP.</li>
+<li><strong>Сменили прокси-пул</strong> (Webshare) → обновите в софтах, где он указан (например, Steam Market селлер, Market CS:GO брокер), и перезапустите их. В SSA прокси-пул не настраивается.</li>
+<li><strong>Сменили пароль Steam или API-ключ Market CS:GO</strong> → перезапустите все софты с этим аккаунтом.</li>
+</ul><aside data-emoji="ℹ️"><p>Если открыли конфигурацию, ничего не изменили — перезапуск не нужен.</p></aside></div></div></div><script type="module">function e(){document.querySelectorAll(`.pspoiler`).forEach(e=>{if(e.hasAttribute(`data-init`))return;e.setAttribute(`data-init`,``);let t=e.querySelector(`.pspoiler-trigger`),n=e.querySelector(`.pspoiler-content`),r=e.querySelector(`.pspoiler-inner`),i=null,a=()=>{i&&=(n.removeEventListener(`transitionend`,i),null)};t.addEventListener(`click`,()=>{e.hasAttribute(`data-open`)?(a(),n.style.height=n.scrollHeight+`px`,n.offsetHeight,n.style.height=`0`,e.removeAttribute(`data-open`),t.setAttribute(`aria-expanded`,`false`)):(a(),e.setAttribute(`data-open`,``),t.setAttribute(`aria-expanded`,`true`),n.style.height=r.offsetHeight+`px`,i=t=>{t.target===n&&t.propertyName===`height`&&e.hasAttribute(`data-open`)&&(n.style.height=`auto`,a())},n.addEventListener(`transitionend`,i))})})}e(),document.addEventListener(`astro:after-swap`,e);</script></main><footer class="site-footer"><div class="landing-grid landing-grid-3"><a href="https://t.me/ProfitonSupport" class="landing-card landing-card-sm" target="_blank" rel="noopener noreferrer"><div class="landing-card-icon">💬</div><div class="landing-card-title">Техподдержка</div><div class="landing-card-desc">Ответим на любой вопрос</div><div class="landing-card-tg"><img src="/images/tg-round.svg" class="landing-tg-icon" alt="">@ProfitonSupport</div></a><a href="https://t.me/Profiton_Chat" class="landing-card landing-card-sm" target="_blank" rel="noopener noreferrer"><div class="landing-card-icon">👥</div><div class="landing-card-title">Чат сообщества</div><div class="landing-card-desc">Общение и обмен опытом</div><div class="landing-card-tg"><img src="/images/tg-round.svg" class="landing-tg-icon" alt="">@Profiton_Chat</div></a><a href="https://t.me/Profiton_News" class="landing-card landing-card-sm" target="_blank" rel="noopener noreferrer"><div class="landing-card-icon">📢</div><div class="landing-card-title">Новостной канал</div><div class="landing-card-desc">Обновления и анонсы</div><div class="landing-card-tg"><img src="/images/tg-round.svg" class="landing-tg-icon" alt="">@Profiton_News</div></a></div><p class="site-footer-copy">© PROFITON 2023-<span id="footer-year">2026</span></p></footer></div><script>
+    // Год берётся из заголовка Date ответа сервера, а не из часов посетителя; при ошибке остаётся год сборки.
+    (function() {
+      var el = document.getElementById('footer-year');
+      if (!el) return;
+      fetch('/favicon.ico', { method: 'HEAD', cache: 'no-store' }).then(function(r) {
+        var year = new Date(r.headers.get('Date') || '').getUTCFullYear();
+        if (!isNaN(year)) el.textContent = String(Math.min(2099, Math.max(2026, year)));
+      }).catch(function() {});
+    })();
+  </script><script type="module" src="/assets/PLayout.astro_astro_type_script_index_0_lang.DSq_gnpy.js"></script><script type="module">var e=document.getElementById(`theme-toggle`);function t(){return window.matchMedia(`(prefers-color-scheme: dark)`).matches?`night`:`day`}function n(e){document.documentElement.setAttribute(`data-theme`,e)}e.addEventListener(`click`,()=>{let e=document.documentElement.getAttribute(`data-theme`)===`day`?`night`:`day`;e===t()?localStorage.setItem(`theme_linked`,`true`):localStorage.setItem(`theme_linked`,`false`),localStorage.setItem(`theme`,e),n(e)});var r=document.getElementById(`tg-toggle`),i=document.getElementById(`tg-popup`);document.querySelectorAll(`.tg-handle`).forEach(e=>{let t;e.addEventListener(`touchstart`,()=>{t=setTimeout(()=>{let t=document.createRange();t.selectNodeContents(e);let n=window.getSelection();n?.removeAllRanges(),n?.addRange(t)},500)}),e.addEventListener(`touchend`,()=>clearTimeout(t)),e.addEventListener(`touchmove`,()=>clearTimeout(t))}),document.querySelectorAll(`.tg-link`).forEach(e=>{e.addEventListener(`click`,()=>{let t=window.getSelection();if(t&&t.toString().length>0)return;let n=e.dataset.href;n&&window.open(n,`_blank`)})});function a(){let e=document.querySelector(`.navbar`).getBoundingClientRect();i.style.top=e.bottom+10+`px`,i.style.right=document.documentElement.clientWidth-e.right+`px`}r.addEventListener(`click`,e=>{e.stopPropagation(),i.classList.toggle(`open`)&&a()}),window.addEventListener(`resize`,()=>{i.classList.contains(`open`)&&a()}),document.addEventListener(`click`,e=>{i.classList.contains(`open`)&&!i.contains(e.target)&&i.classList.remove(`open`)}),window.matchMedia(`(prefers-color-scheme: dark)`).addEventListener(`change`,e=>{let t=e.matches?`night`:`day`,r=localStorage.getItem(`theme_linked`)!==`false`,i=document.documentElement.getAttribute(`data-theme`);r?(localStorage.setItem(`theme`,t),n(t)):t===i&&localStorage.setItem(`theme_linked`,`true`)});</script></body></html>

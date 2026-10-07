@@ -1,0 +1,94 @@
+<!DOCTYPE html><html lang="ru"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><link rel="icon" href="/favicon.ico" sizes="32x32"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><title>Основы защиты Steam аккаунта</title><meta name="description" content="Steam отслеживает связи между аккаунтами. Если платформа определит, что несколько аккаунтов принадлежат одному владельцу, она пометит их как «ферму аккаунтов»."><meta property="og:type" content="website"><meta property="og:site_name" content="PROFITON"><meta property="og:title" content="База знаний • Основы защиты Steam аккаунта"><meta property="og:description" content="Steam отслеживает связи между аккаунтами. Если платформа определит, что несколько аккаунтов принадлежат одному владельцу, она пометит их как «ферму аккаунтов»."><meta property="og:image" content="https://profiton.org/images/profiton.png"><meta property="og:image:width" content="1500"><meta property="og:image:height" content="1500"><meta name="robots" content="noindex, follow"><link rel="alternate" type="text/markdown" href="/knowledge-base/steam-security/index.md"><link rel="describedby" type="text/plain" href="/llms.txt"><link rel="preload" href="/images/header-icons.svg" as="image"><script>
+      (function() {
+        var linked = localStorage.getItem('theme_linked') !== 'false';
+        var deviceTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'night' : 'day';
+        var theme = linked ? deviceTheme : (localStorage.getItem('theme') || deviceTheme);
+        document.documentElement.setAttribute('data-theme', theme);
+      })();
+    </script><link rel="stylesheet" href="/assets/gallery-viewer.CX5_4vWt.css"><link rel="stylesheet" href="/assets/PLayout.BCHJ4ezO.css"></head><body><div class="navbar-wrap"><nav class="navbar glass"><a href="/" class="navbar-brand"><img src="/images/profiton.svg" alt="PROFITON" class="navbar-logo"></a><span class="navbar-sep">&bull;</span><a href="/knowledge-base" class="navbar-section"><img src="/images/book.svg" alt="" class="navbar-page-icon"><span class="navbar-section-title">База знаний</span></a><span class="navbar-sep">&bull;</span><span class="navbar-page"><img src="/images/steam-round.svg" alt="" class="navbar-page-icon"><span class="navbar-page-title">Основы защиты Steam аккаунта</span></span><button id="tg-toggle" class="tg-toggle" type="button" aria-label="Telegram"><span class="tg-btn-icon"></span></button><button id="theme-toggle" class="theme-toggle" type="button" aria-label="Переключить тему"><svg class="icon-day" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg><svg class="icon-night" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg></button></nav></div><div id="tg-popup" class="tg-popup glass"><div class="tg-link" data-href="https://t.me/ProfitonSupport"><span>Техподдержка</span><img src="/images/tg-round.svg" class="tg-icon" alt=""><span class="tg-handle">@ProfitonSupport</span></div><div class="tg-link" data-href="https://t.me/Profiton_Chat"><span>Чат сообщества</span><img src="/images/tg-round.svg" class="tg-icon" alt=""><span class="tg-handle">@Profiton_Chat</span></div><div class="tg-link" data-href="https://t.me/Profiton_News"><span>Новостной канал</span><img src="/images/tg-round.svg" class="tg-icon" alt=""><span class="tg-handle">@Profiton_News</span></div></div><div class="page-wrap"><header class="site-header"><div class="header-banner"><div class="header-left"><div class="header-text"><img src="/images/profiton-no-bg.svg" alt="P" class="header-p-icon"><span class="header-rofiton">ROFITON</span></div></div><div class="header-right"><img src="/images/header-icons.svg" alt="" class="header-icons"></div></div></header><main class="prose"><h1><img src="/images/steam-round.svg" alt="" class="page-icon"><span>Основы защиты Steam аккаунта</span></h1><h2 id="зачем-нужна-защита"><span class="color-override" style="--c: #3669C4">Зачем нужна защита</span></h2>
+<p>Steam отслеживает связи между аккаунтами. Если платформа определит, что несколько аккаунтов принадлежат одному владельцу, она пометит их как «ферму аккаунтов». После этого блокировка всех связанных аккаунтов становится вопросом времени. Steam не блокирует без доказательств, но если связь между аккаунтами установлена, обжаловать решение практически невозможно.</p>
+<hr/>
+<h2 id="что-отслеживает-steam"><span class="color-override" style="--c: #3669C4">Что отслеживает Steam</span></h2>
+<p>Steam собирает данные на нескольких уровнях, и каждый из них может стать причиной блокировки.</p>
+<p><strong>IP-адрес.</strong> Самый очевидный параметр. Если несколько аккаунтов авторизуются с одного IP, это первый сигнал для системы.</p>
+<p><em><strong>Отпечаток браузера (fingerprint).</strong></em> Когда вы заходите на любой сайт через браузер, он передаёт набор технических характеристик вашего устройства: операционную систему, версию браузера, разрешение экрана, установленные шрифты, модель видеокарты, языковой пакет, количество ядер процессора. В совокупности эти параметры создают уникальную «подпись», по которой сайт распознаёт конкретное устройство даже без cookie-файлов. Вам не нужно вводить логин и пароль, сайт уже знает, что это тот же компьютер.</p>
+<p><em><strong>Привязка к устройству (device ID).</strong></em> Steam запоминает идентификатор устройства, с которого происходит авторизация. Если десятки аккаунтов привязаны к одному и тому же устройству, система расценивает это как ферму.</p>
+<p><em><strong>Конфигурация ПК (Steam клиент).</strong></em> Это то, о чём многие забывают. Клиент Steam видит полную конфигурацию вашего компьютера: процессор, видеокарту, объём оперативной памяти, жёсткие диски, MAC-адреса сетевых адаптеров и другие аппаратные идентификаторы. Эти данные собираются не только для «опросов оборудования», Steam активно использует их для привязки аккаунтов к конкретному железу. Именно поэтому существуют Hardware ID баны (HWID), когда блокируют не аккаунт, а само устройство. Античиты EAC и VAC также работают на уровне железа: если один аккаунт получил бан за читы, все остальные аккаунты, которые когда-либо авторизовались на этом же компьютере, могут быть заблокированы цепочкой. Та же логика применяется при обнаружении фермы: Steam знает, что 50 аккаунтов запускались на одной и той же машине.</p>
+<blockquote>
+<p><span class="color-override" style="--c: #dc2626"><strong>❗️Важно:</strong></span> антидетект браузер защищает только браузерные сессии. Он не маскирует железо от клиента Steam. Поэтому авторизация нескольких аккаунтов в десктопном клиенте Steam на одном ПК — прямой путь к связыванию аккаунтов.</p>
+</blockquote>
+<hr/>
+<h2 id="привязка-к-устройству-в-софте-profiton"><span class="color-override" style="--c: #3669C4">Привязка к устройству в софте PROFITON</span></h2>
+<p>Наш софт генерирует уникальный идентификатор устройства для каждого аккаунта и сохраняет его в MaFile. Для Steam каждый ваш аккаунт выглядит так, будто он работает на отдельном физическом устройстве.</p>
+<p>Это встроено в софт и не требует от вас никаких действий. Привязка создаётся автоматически при первой авторизации и сохраняется на весь период работы.</p>
+<p>Ни один конкурирующий софт не реализует привязку к уникальному устройству на уровне каждого аккаунта. Разницу подтвердили пользователи, работающие с тысячами аккаунтов: при использовании одного device ID на все аккаунты вероятность бана значительно выше.</p>
+<blockquote>
+<p><span class="color-override" style="--c: #dc2626"><strong>❗️Примечание:</strong></span> привязка к устройству решает проблему device ID, но не отменяет необходимость антидетект браузера и отдельных прокси для каждого аккаунта.</p>
+</blockquote>
+<hr/>
+<h2 id="антидетект-браузер"><span class="color-override" style="--c: #3669C4">Антидетект браузер</span></h2>
+<p><em>Антидетект браузер</em> — это браузер, который позволяет создавать изолированные профили с уникальным набором параметров. Каждый профиль имитирует отдельное устройство с собственным отпечатком.</p>
+<p>Мы рекомендуем Dolphin Anty как наиболее бюджетный и проверенный вариант, но принципы настройки одинаковы для любого антидетекта.</p>
+<p><strong>Параметры, которые необходимо настроить в каждом профиле:</strong></p>
+<ol>
+<li><strong>Useragent</strong> — выберите любой актуальный. Не используйте один и тот же для всех профилей.</li>
+<li><strong>WebRTC</strong> — отключить. Этот протокол может раскрыть ваш реальный IP даже при использовании прокси.</li>
+<li><strong>Canvas</strong> — режим «шум». Генерирует уникальный отпечаток графической подсистемы.</li>
+<li><strong>WebGL</strong> — режим «шум». Аналогично canvas, но для 3D-рендеринга.</li>
+<li><strong>Информация о видеокарте (WebGL Info)</strong> — подберите любую модель. Не оставляйте реальную.</li>
+<li><strong>Client Rects</strong> — режим «шум».</li>
+<li><strong>Часовой пояс, язык, геолокация</strong> — режим «авто» (подтянутся из прокси).</li>
+<li><strong>Процессор и память</strong> — выберите любые значения ядер и ГБ.</li>
+<li><strong>Разрешение экрана</strong> — выберите любое распространённое.</li>
+<li><strong>Медиа-устройства</strong> — настройте вручную: 0 или 1 микрофон, динамик, камера.</li>
+<li><strong>Порты</strong> — заблокировать.</li>
+<li><strong>MAC-адрес и имя устройства</strong> — укажите уникальные для каждого профиля.</li>
+</ol>
+<blockquote>
+<p><span class="color-override" style="--c: #dc2626"><strong>❗️Важно:</strong></span> обязательно добавьте прокси к каждому профилю. Без прокси вся настройка антидетекта бессмысленна.</p>
+</blockquote>
+<hr/>
+<h2 id="прокси"><span class="color-override" style="--c: #3669C4">Прокси</span></h2>
+<p>Для работы со Steam используйте IPv4 прокси. Каждый аккаунт должен работать через отдельный прокси. Подробное руководство по выбору и покупке прокси находится в разделе <a href="/knowledge-base#%D0%BF%D1%80%D0%BE%D0%BA%D1%81%D0%B8"><span class="link-icon-wrap"><img src="/images/book.svg" class="link-icon" alt/>⁠</span><em><strong>Прокси</strong></em></a> базы знаний.</p>
+<blockquote>
+<p><span class="color-override" style="--c: #dc2626"><strong>⚠️ Предупреждение:</strong></span> если вы используете IPv4 прокси для других сайтов (не Steam), обращайте внимание на поддержку протокола HTTP/3. Всё больше сайтов используют его для обнаружения мультиаккаунтинга.</p>
+</blockquote>
+<hr/>
+<h2 id="подготовка-к-работе-пошагово"><span class="color-override" style="--c: #3669C4">Подготовка к работе (пошагово)</span></h2>
+<p><strong>Шаг 1. Создайте профиль в антидетект браузере.</strong> Настройте все параметры из раздела «Антидетект браузер» выше. Каждый аккаунт должен иметь свой отдельный профиль с уникальным набором параметров.</p>
+<p><strong>Шаг 2. Добавьте прокси к профилю.</strong> Привяжите отдельный IPv4 прокси к каждому профилю. Один прокси — один аккаунт, без исключений.</p>
+<p><strong>Шаг 3. Прогрейте профиль браузера.</strong> Перед первым входом в Steam откройте в профиле 30-50 популярных сайтов (любой список «ТОП-100 сайтов по посещаемости»). Большинство антидетект браузеров имеют встроенный cookie-робот, который сделает это автоматически. После прогрева профиль выглядит как реальный пользователь с историей посещений, а не как только что созданная пустая сессия.</p>
+<p><strong>Шаг 4. Авторизуйтесь в Steam через антидетект браузер.</strong> Только после выполнения всех предыдущих шагов. Никогда не заходите в Steam через обычный браузер или десктопный клиент.</p>
+<hr/>
+<h2 id="прогрев-аккаунтов-активностью-рекомендуется"><span class="color-override" style="--c: #3669C4">Прогрев аккаунтов активностью (рекомендуется)</span></h2>
+<p>Шаги выше — это минимум, который обеспечивает базовую защиту. Но антифрод-система Steam обращает внимание не только на техническую изоляцию, но и на поведение аккаунта. Пустой аккаунт, который сразу начинает торговать, вызывает подозрения.</p>
+<p>Лучший вариант — аккаунт с многолетней историей активности: покупками игр, активностью в сообществах, пополнениями баланса и другими действиями. Чем естественнее выглядит история аккаунта, тем меньше внимания он привлекает.</p>
+<p>Если у вас нет возможности или желания прогревать аккаунт активностью, вы можете использовать пустой аккаунт с антидетект браузером и прокси. Это рабочий вариант, но с более высоким уровнем риска.</p>
+<blockquote>
+<p><span class="color-override" style="--c: #dc2626"><strong>❗️Ограничение:</strong></span> мы рекомендуем использовать не более 2-3 аккаунтов на одном ПК. Их можно прогревать параллельно, это не создаёт рисков, при условии что каждый работает в изолированном профиле с отдельным прокси.</p>
+</blockquote>
+<hr/>
+<h2 id="чего-делать-нельзя"><span class="color-override" style="--c: #3669C4">Чего делать нельзя</span></h2>
+<blockquote>
+<span class="color-override" style="--c: #dc2626"><strong>⚠️ Критические ошибки, которые приводят к блокировке:</strong></span>
+</blockquote>
+<ol>
+<li><strong>Авторизация в клиенте Steam.</strong> Никогда не заходите в десктопный клиент Steam на аккаунтах, которые вы не прогреваете активностью. Клиент видит ваше железо и свяжет аккаунты. Антидетект браузер не защищает от этого.</li>
+<li><strong>Один прокси на несколько аккаунтов.</strong> Каждый аккаунт должен работать через свой отдельный прокси. Общий IP — первый сигнал для антифрода.</li>
+<li><strong>Вход в Steam без антидетекта.</strong> Обычный браузер передаёт реальный отпечаток вашего устройства. Даже с прокси аккаунты будут связаны.</li>
+<li><strong>Сомнительные аккаунты.</strong> Не покупайте фишинговые или брут-аккаунты. Риск блокировки по запросу настоящего владельца крайне высок.</li>
+<li><strong>Некачественный софт.</strong> Одна программа без изоляции устройств объединит все ваши аккаунты в «ферму» для Steam.</li>
+</ol>
+<hr/>
+<h2 id="вывод"><span class="color-override" style="--c: #3669C4">Вывод</span></h2>
+<p>Защита аккаунтов строится на трёх уровнях: уникальный IP (прокси), уникальный отпечаток браузера (антидетект) и уникальное устройство (встроено в софт PROFITON). При соблюдении всех трёх уровней Steam не может связать ваши аккаунты между собой.</p></main><footer class="site-footer"><div class="landing-grid landing-grid-3"><a href="https://t.me/ProfitonSupport" class="landing-card landing-card-sm" target="_blank" rel="noopener noreferrer"><div class="landing-card-icon">💬</div><div class="landing-card-title">Техподдержка</div><div class="landing-card-desc">Ответим на любой вопрос</div><div class="landing-card-tg"><img src="/images/tg-round.svg" class="landing-tg-icon" alt="">@ProfitonSupport</div></a><a href="https://t.me/Profiton_Chat" class="landing-card landing-card-sm" target="_blank" rel="noopener noreferrer"><div class="landing-card-icon">👥</div><div class="landing-card-title">Чат сообщества</div><div class="landing-card-desc">Общение и обмен опытом</div><div class="landing-card-tg"><img src="/images/tg-round.svg" class="landing-tg-icon" alt="">@Profiton_Chat</div></a><a href="https://t.me/Profiton_News" class="landing-card landing-card-sm" target="_blank" rel="noopener noreferrer"><div class="landing-card-icon">📢</div><div class="landing-card-title">Новостной канал</div><div class="landing-card-desc">Обновления и анонсы</div><div class="landing-card-tg"><img src="/images/tg-round.svg" class="landing-tg-icon" alt="">@Profiton_News</div></a></div><p class="site-footer-copy">© PROFITON 2023-<span id="footer-year">2026</span></p></footer></div><script>
+    // Год берётся из заголовка Date ответа сервера, а не из часов посетителя; при ошибке остаётся год сборки.
+    (function() {
+      var el = document.getElementById('footer-year');
+      if (!el) return;
+      fetch('/favicon.ico', { method: 'HEAD', cache: 'no-store' }).then(function(r) {
+        var year = new Date(r.headers.get('Date') || '').getUTCFullYear();
+        if (!isNaN(year)) el.textContent = String(Math.min(2099, Math.max(2026, year)));
+      }).catch(function() {});
+    })();
+  </script><script type="module" src="/assets/PLayout.astro_astro_type_script_index_0_lang.DSq_gnpy.js"></script><script type="module">var e=document.getElementById(`theme-toggle`);function t(){return window.matchMedia(`(prefers-color-scheme: dark)`).matches?`night`:`day`}function n(e){document.documentElement.setAttribute(`data-theme`,e)}e.addEventListener(`click`,()=>{let e=document.documentElement.getAttribute(`data-theme`)===`day`?`night`:`day`;e===t()?localStorage.setItem(`theme_linked`,`true`):localStorage.setItem(`theme_linked`,`false`),localStorage.setItem(`theme`,e),n(e)});var r=document.getElementById(`tg-toggle`),i=document.getElementById(`tg-popup`);document.querySelectorAll(`.tg-handle`).forEach(e=>{let t;e.addEventListener(`touchstart`,()=>{t=setTimeout(()=>{let t=document.createRange();t.selectNodeContents(e);let n=window.getSelection();n?.removeAllRanges(),n?.addRange(t)},500)}),e.addEventListener(`touchend`,()=>clearTimeout(t)),e.addEventListener(`touchmove`,()=>clearTimeout(t))}),document.querySelectorAll(`.tg-link`).forEach(e=>{e.addEventListener(`click`,()=>{let t=window.getSelection();if(t&&t.toString().length>0)return;let n=e.dataset.href;n&&window.open(n,`_blank`)})});function a(){let e=document.querySelector(`.navbar`).getBoundingClientRect();i.style.top=e.bottom+10+`px`,i.style.right=document.documentElement.clientWidth-e.right+`px`}r.addEventListener(`click`,e=>{e.stopPropagation(),i.classList.toggle(`open`)&&a()}),window.addEventListener(`resize`,()=>{i.classList.contains(`open`)&&a()}),document.addEventListener(`click`,e=>{i.classList.contains(`open`)&&!i.contains(e.target)&&i.classList.remove(`open`)}),window.matchMedia(`(prefers-color-scheme: dark)`).addEventListener(`change`,e=>{let t=e.matches?`night`:`day`,r=localStorage.getItem(`theme_linked`)!==`false`,i=document.documentElement.getAttribute(`data-theme`);r?(localStorage.setItem(`theme`,t),n(t)):t===i&&localStorage.setItem(`theme_linked`,`true`)});</script></body></html>
