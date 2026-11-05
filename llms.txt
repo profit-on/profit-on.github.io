@@ -1,0 +1,52 @@
+# PROFITON
+
+> Продукты автоматизации торговли в Steam и на других площадках, инструкции и база знаний.
+
+Материалы на русском языке. Ссылки от корня относятся к тому же домену, с которого загружен файл. Архивные продукты обозначены в тексте; не считайте их доступными для покупки. Содержимое изображений не транскрибировано: при необходимости откройте их по ссылкам.
+
+## Обзор и условия
+
+- [©PROFITON](/index.md)
+- [Импорт и экспорт CSV](/csv/index.md)
+- [Лицензионное соглашение](/license/index.md)
+- [Реферальная программа](/referral/index.md)
+- [Отзывы](/reviews/index.md)
+- [Экосистема Steam](/steam-ecosystem/index.md)
+
+## Продукты
+
+- [Bitskins брокер](/app/bitskins-broker/index.md)
+- [Buff163 брокер](/app/buff163-broker/index.md)
+- [Комплект «Ферма кейсов CS2»](/app/bundle-cs2-farm/index.md)
+- [Комплект DMarket](/app/bundle-dmarket/index.md)
+- [Комплект Market CS:GO](/app/bundle-market-csgo/index.md)
+- [DMarket брокер](/app/dmarket-broker/index.md)
+- [Market CS:GO брокер](/app/market-csgo-broker/index.md)
+- [Market CS:GO селлер & Steam cashout](/app/market-csgo-seller-cashout/index.md)
+- [Market CS:GO селлер](/app/market-csgo-seller/index.md)
+- [Steam server-side authenticator](/app/ssa/index.md)
+- [Steam Market селлер](/app/steam-seller/index.md)
+
+## База знаний
+
+- [База знаний](/knowledge-base/index.md)
+- [Риски использования чужих учётных записей](/knowledge-base/account-risks/index.md)
+- [Основные концепции](/knowledge-base/concepts/index.md)
+- [Подбор процентов вывода](/knowledge-base/cs2-farm-percentages/index.md)
+- [Получение API-ключа Market CS:GO](/knowledge-base/market-csgo-api-key/index.md)
+- [Принцип формирования прибыли](/knowledge-base/market-csgo-profit/index.md)
+- [Теоретические основы Комплекта Market CS:GO](/knowledge-base/market-csgo-theory/index.md)
+- [Поведение рынка при сезонных распродажах](/knowledge-base/market-seasons/index.md)
+- [Покупка прокси-пула Webshare](/knowledge-base/proxy-guide/index.md)
+- [Настройка DMarket брокер](/knowledge-base/setup-dmarket-broker/index.md)
+- [Настройка Market CS:GO брокер](/knowledge-base/setup-market-csgo-broker/index.md)
+- [Настройка Market CS:GO селлер & Steam cashout](/knowledge-base/setup-market-csgo-seller-cashout/index.md)
+- [Настройка Market CS:GO селлер](/knowledge-base/setup-market-csgo-seller/index.md)
+- [Настройка Steam server-side authenticator](/knowledge-base/setup-ssa/index.md)
+- [Настройка Steam Market селлер](/knowledge-base/setup-steam-seller/index.md)
+- [Основы защиты Steam аккаунта](/knowledge-base/steam-security/index.md)
+
+## Выгрузки
+
+- [Весь текст сайта](/llms-full.txt)
+- [JSON-каталог с текстами, ссылками и изображениями](/api/content.json)
